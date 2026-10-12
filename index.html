@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#1c1c1f" />
+  <meta name="description" content="An interactive 3D exhibition: one green toy soldier, three poster iterations." />
+  <title>Same Soldier, Different Meaning</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Tells the browser where to find Three.js (loaded from a CDN) -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <!-- Three.js draws into this canvas -->
+  <canvas id="scene" aria-label="3D exhibition: a green toy soldier on a plinth surrounded by three posters"></canvas>
+
+  <!-- Loading screen (hidden by main.js once everything has loaded) -->
+  <div class="loader" id="loader" role="status" aria-live="polite">
+    <p class="loader-title">Loading exhibition</p>
+    <div class="loader-track"><div class="loader-bar" id="loader-bar"></div></div>
+    <p class="loader-sub" id="loader-sub">Preparing the copies…</p>
+  </div>
+
+  <!-- Exhibition title (top-left) -->
+  <header class="title">
+    <h1>The Soldier</h1>
+    <p>Tap an artwork to inspect</p>
+  </header>
+
+  <!-- Instruction (bottom-centre), fades after the first interaction -->
+  <p class="hint" id="hint">Drag to explore · Pinch to zoom · Tap an artwork for more</p>
+
+  <!-- Keyboard / screen-reader access to the artworks (appears when tabbed to) -->
+  <nav class="artwork-nav" aria-label="Artworks">
+    <button type="button" data-artwork="soldier">Inspect the toy soldier</button>
+    <button type="button" data-artwork="0">Inspect poster 01</button>
+    <button type="button" data-artwork="1">Inspect poster 02</button>
+    <button type="button" data-artwork="2">Inspect poster 03</button>
+  </nav>
+
+  <!-- Information panel for focus mode (filled in by main.js) -->
+  <aside class="info-panel" id="info-panel" aria-labelledby="info-title" aria-hidden="true" inert>
+    <div class="info-scroll" id="info-scroll">
+      <p class="info-kicker" id="info-kicker"></p>
+      <h2 class="info-title" id="info-title" tabindex="-1"></h2>
+      <p class="info-subtitle" id="info-subtitle"></p>
+      <dl class="info-meta" id="info-meta"></dl>
+      <div class="info-description" id="info-description"></div>
+    </div>
+    <button type="button" class="back-button" id="back-button">← Back to exhibition</button>
+  </aside>
+
+  <!-- If the 3D code can't start (e.g. no internet for the CDN), say so instead of loading forever -->
+  <script>
+    setTimeout(function () {
+      if (!document.documentElement.classList.contains("is-loaded")) {
+        document.getElementById("loader-sub").textContent =
+          "Still loading… please check your internet connection.";
+      }
+    }, 25000);
+  </script>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
