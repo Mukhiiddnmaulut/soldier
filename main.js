@@ -15,35 +15,39 @@ const SOLDIER_INFO = {
     ["Medium", "Mixed media: toy soldier, digital photography, collage, printed posters, augmented reality"],
   ],
   description:
-    "The green plastic toy soldier, a ready-made object of reproduction that is meant to repeat, arrange and exchange itself in the process of play. Known from childhood playtime, the soldier is linked with concepts as military force, discipline, masculinity and nostalgia, but its repeated green body deprives it of any individuality.\n\n" +
-    "The question: do meanings and conceptions attributed to one particular object transform when the way they are presented also transforms?\n\n" +
-    "In the course of this project, a picture of the toy is photographed, scanned, digitized and turned into posters through collage and type, cropping and repetition, distortion and manipulation with physical forms. Every new object contains some trace of the previous stage, changing its scale, surface, context and meaning. The toy turns into an image; the image – into a form; and posters – into an abstract virtual world.",
+    "The green plastic toy soldier is a ready-made copy: mass-produced from a single mould, identical, endlessly replaceable. Familiar from childhood play, it carries ideas of military force, discipline, masculinity and nostalgia, yet its repeated green body strips it of any individuality.\n\n" +
+    "The question: do the meanings attached to an object change when the way it is presented changes?\n\n" +
+    "Jean Baudrillard describes the miniature world of Disneyland as one where every value is “exalted by the miniature and the comic strip. Embalmed and pacified” (Simulacra and Simulation, 1981/1994, p. 12). The toy soldier does the same to war: it shrinks violence into something small, smooth and safe enough for a child to hold. This project takes that copy and copies it again – photographed, scanned, collaged and set in type – to put back what the toy leaves out.\n\n" +
+    "The result is three anti-war posters, each pairing the toy with words about war from a different century. Floating here in a virtual space with no walls, they become one more layer of copies: images of a toy that was itself only an image of a soldier.",
 };
 
 const POSTERS = [
   {
-    file: "assets/poster-1.png",
+    file: "assets/poster-01.jpg",
     number: "01",
-    title: "Friendship",
-    subtitle: "The soldier as slogan",
+    title: "War Is Sweet",
+    subtitle: "The soldier as plaything",
     description:
-      "Printed in a single black ink on propaganda red, the soldier stands like the hero of a recruitment poster. Behind him, ДРУЖБА – Russian for “friendship” – repeats six times until it reads less like a word and more like a chant. The toy now borrows the voice of political image-making, and the warm promise of the slogan sits uneasily beside the rifle in his hands.",
+      "Seen from above, a figure lies stretched out in long green grass, relaxed and unbothered, beside a soldier grown to human size. The scene looks like a lazy afternoon, and that is the point. Across the top, WAR is set in blackletter; below it runs the rest of a line from Erasmus: war “is sweet to those who have never experienced it.”\n\n" +
+      "The toy belongs to that sweetness. It lets war be played with by people who have never been near it, and the poster asks the viewer to notice how comfortable that has always felt.",
   },
   {
-    file: "assets/poster-2.png",
+    file: "assets/poster-02.jpg",
     number: "02",
-    title: "Heat Signature",
-    subtitle: "The soldier as target",
+    title: "Pawn",
+    subtitle: "The soldier as game piece",
     description:
-      "Turned away from the viewer, the soldier glows in the burning oranges of a thermal camera against a dark screen grid. The green that once meant plastic becomes body heat – the way a figure appears when it is watched from a distance. Below, “The Soldier” is set in hollow blackletter, a typeface of monuments and old headlines, reduced to a faint outline that barely holds on.",
+      "A hand reaches across a chessboard and moves the green soldier like a pawn, while the player behind it smiles. The image is grainy and black and white, like a photocopy of a photocopy; only the soldier keeps its colour.\n\n" +
+      "Above, John F. Kennedy’s words to the United Nations in 1961: “Mankind must put an end to war, or war will put an end to mankind.” Only WAR breaks into blackletter. A mass-produced toy is made to be lost and replaced, and the poster asks who decides which pieces are moved, and which are given up.",
   },
   {
-    file: "assets/poster-3.png",
+    file: "assets/poster-03.jpg",
     number: "03",
-    title: "Resolution",
-    subtitle: "The soldier as data",
+    title: "Sacrifice",
+    subtitle: "The soldier as cost",
     description:
-      "The soldier is rebuilt from glassy pixel blocks, the way a screen approximates a body it cannot fully hold. A single band cuts across the chest and reveals another version underneath – a distorted, heat-coloured render of the torso and rifle, marked out by thin lines like a scan. Each layer is another copy, and none of them is the original toy.",
+      "The familiar silhouette of the toy soldier is cut out of a pale page and filled with an explosion: fire, smoke and broken ground where the smooth green plastic should be. The outline that made war look harmless now holds what it was always standing in for.\n\n" +
+      "At the top, Dwight D. Eisenhower’s 1953 warning: “Every gun that is made, every warship launched, every rocket fired signifies, in the final sense, a theft from those who hunger and are not fed, those who are cold and are not clothed.” At the bottom, SACRIFICE runs off both edges of the page, too large to fit.",
   },
 ];
 
